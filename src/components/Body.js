@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Cart from "./Cart";
+import Card from "./Card/Card";
 const Body = () => {
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState(1);
@@ -30,11 +30,7 @@ const Body = () => {
           {products
             // .slice(page * pdtPerPage - pdtPerPage, page * pdtPerPage)
             .map((item) => (
-              <span key={item.id} className="products__single">
-                {/* <img src={item.images[0]} alt={item.title} />
-                <span>{item.title}</span> */}
-                <Cart item={item} />
-              </span>
+              <Card key={item.id} item={item} />
             ))}
         </div>
       )}

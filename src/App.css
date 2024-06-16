@@ -9,7 +9,14 @@ body {
   width: 100%;
   height: 60px;
 }
+
 .products {
-  width: 90%;
-  
+  background-color: aqua;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: start;
+  justify-content: center;
+  margin: 0 auto;
 }

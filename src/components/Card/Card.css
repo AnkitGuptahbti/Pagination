@@ -1,0 +1,40 @@
+.card {
+  width: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  overflow: hidden; /* Ensure no overflow in card */
+}
+
+.cardImgContainer {
+  width: 100%;
+  height: 350px;
+  overflow: hidden; /* Hide overflow from scaled image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; Maintain aspect ratio and cover the container */ /*image are getting bigger and cutted */
+  object-fit: contain; /* Ensure the entire image fits within the container */ /*image are now smaller so no cutted*/
+  transition: all 0.3s ease-in-out;
+}
+
+.cardTitle {
+  font-size: 24px;
+  height: 50px;
+  overflow: hidden; /*need as title increase although .card has property hidden bcz that will cut but this will remove {for this chek by cmding this}*/
+}
+
+.card:hover .cardImg {
+  transform: scale(1.2);
+}
