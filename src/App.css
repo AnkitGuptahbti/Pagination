@@ -11,7 +11,7 @@ body {
 }
 
 .products {
-  background-color: aqua;
+  /* background-color: aqua; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -20,3 +20,28 @@ body {
   justify-content: center;
   margin: 0 auto;
 }
+
+.pagination {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination span {
+  border: 1px solid pink;
+  margin: 0 5px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: rgb(186, 179, 179);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.pagination span:hover {
+  background-color: rgb(69, 69, 67);
+}
+.pagination span.page__selected {
+  background-color: rgb(104, 95, 112);
+}
+  
